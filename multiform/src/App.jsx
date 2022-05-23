@@ -3,7 +3,8 @@ import logo from './logo.svg'
 import './App.css'
 import ReactForm from './Components/ReactForm'
 
-function App() {
+export const App = () =>
+ {
   const [count, setCount] = useState(0)
 
   return (
@@ -12,5 +13,3 @@ function App() {
     </div>
   )
 }
-
-export default App

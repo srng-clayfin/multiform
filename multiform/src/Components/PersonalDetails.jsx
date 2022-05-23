@@ -1,9 +1,9 @@
 import React from "react";
-import './Personal.css'
+import './Signup.css'
 export const PersonalDetails = ({ formData, setFormData }) =>
 {
   return (  
-    <div className="Personal-info">
+    <div className="sing-up">
       <input
         type="text"
         placeholder="Address : "
@@ -20,8 +20,8 @@ export const PersonalDetails = ({ formData, setFormData }) =>
           setFormData({ ...formData, fathername: e.target.value });
         }}
       />
-      Date Of Birth : 
-      <input type="date" value={formData.dob} onChange={(e) => {
+      
+      Date Of Birth : <input type="date" value={formData.dob} onChange={(e) => {
           setFormData({ ...formData, dob: e.target.value });
         }} />
 

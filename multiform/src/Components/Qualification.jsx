@@ -1,9 +1,9 @@
 import React from "react";
-import './Personal.css'
+import './Signup.css'
 export const Qualification = ({ formData, setFormData }) =>
 {
   return (
-    <div className="Personal-info">
+    <div className="sing-up">
       <label>
         Qualification : 
         <select  onChange={(e) => {
@@ -45,9 +45,7 @@ export const Qualification = ({ formData, setFormData }) =>
         onChange={(e) => {
           setFormData({ ...formData, marks: e.target.value });
         }}
-      />
-
-      
+      />     
 
     </div>
   );

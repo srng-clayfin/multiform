@@ -1,21 +1,6 @@
 export const Details = ({formData}) =>
 {
-    const d = formData()
-    // fname: "",
-    // lname: "",
-    // email: "",
-    // mobile: "",
-    // gender: "",
-    // qualification:"",
-    // college:"",
-    // rollno:"",
-    // passingyr:"",
-    // marks:"",
-    // address:"",
-    // fathername:"",
-    // dob:"",
-    // adharno:"",
-    // disability:""    
+    const d = formData
     return(
         <div className="details">
             <h3>Full Name : {formData.fname+" "+formData.lname}</h3>
