@@ -1,5 +1,5 @@
 .form{
-    background:linear-gradient(#ccf9f9, #9198e5);
+    background: whitesmoke;
     height: 77.5vh;
     padding-top: 150px;
 
@@ -12,8 +12,7 @@
     grid-template-areas: 
     "Header Header Header"
     "formbody formbody formbody"
-    "footer footer footer"
-    ;
+    "footer footer footer";
     
     grid-gap: 10px;
   

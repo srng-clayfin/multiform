@@ -1,25 +1,42 @@
 import React, { useState } from "react";
 import PersonalInfo from "./PersonalInfo";
-import SingupForm from "./SingupForm";
+import {UserInformation} from "./UserInformation";
 import './ReactForm.css'
+import { Details } from "./Details";
 export default function ReactForm() {
   const [page, setPage] = useState(0);
-  const currentPage = ["Sign Up", "Personal Info"];
+  const currentPage = ["User Information", "Qualification","Personal Details"];
 
   const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
     email: "",
-    password: "",
-    confirmPassword: "",
-    firstName: "",
-    lastName: "",
+    mobile: "",
+    gender: "",
+    qualification:"",
+    college:"",
+    rollno:"",
+    passingyr:"",
+    marks:"",
+    address:"",
+    fathername:"",
+    dob:"",
+    adharno:"",
+    disability:""    
   });
+
+  console.log(formData);
 
   const DispalyOnTheBasisOfPage = () => {
     if (page === 0) {
-      return <SingupForm formData={formData} setFormData={setFormData} />;
-    } else if (page === 1) {
+      return <UserInformation formData={formData} setFormData={setFormData} />;
+    } 
+    else if (page === 1) {
       return <PersonalInfo formData={formData} setFormData={setFormData} />;
     }
+    else if (page === 2) {
+    return <Details />    
+  }
   };
   
   return (
@@ -45,7 +62,7 @@ export default function ReactForm() {
                   if(page===currentPage.length-1)
                   {
                         console.log(formData)
-                        alert("Data Saved In Object")
+                        setPage(0);
                   }
                   else
                   {
