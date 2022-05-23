@@ -9,21 +9,21 @@ export default function ReactForm() {
   const currentPage = ["User Information", "Education","Personal Details","User Details"];
 
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    mobile: "",
-    gender: "",
-    qualification:"",
-    college:"",
-    rollno:"",
-    passingyr:"",
-    marks:"",
-    address:"",
-    fathername:"",
-    dob:"",
-    adharno:"",
-    disability:""    
+    // fname: "",
+    // lname: "",
+    // email: "",
+    // mobile: "",
+    // gender: "",
+    // qualification:"",
+    // college:"",
+    // rollno:"",
+    // passingyr:"",
+    // marks:"",
+    // address:"",
+    // fathername:"",
+    // dob:"",
+    // adharno:"",
+    // disability:""    
   });
 
   // console.log(formData);
@@ -42,7 +42,7 @@ export default function ReactForm() {
     }
 
     else if (page === 3) {
-    return <Details />    
+    return <Details formData={formData} />    
   }
   };
   
@@ -69,6 +69,7 @@ export default function ReactForm() {
                   if(page===currentPage.length-1)
                   {
                         console.log(formData)
+                        setFormData({})
                         setPage(0);
                   }
                   else

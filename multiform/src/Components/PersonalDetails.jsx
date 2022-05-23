@@ -6,10 +6,10 @@ export const PersonalDetails = ({ formData, setFormData }) =>
     <div className="Personal-info">
       <input
         type="text"
-        placeholder="College Name : "
-        value={formData.college}
+        placeholder="Address : "
+        value={formData.address}
         onChange={(e) => {
-          setFormData({ ...formData, college: e.target.value });
+          setFormData({ ...formData,  address: e.target.value });
         }}
       />
       <input
@@ -18,14 +18,6 @@ export const PersonalDetails = ({ formData, setFormData }) =>
         value={formData.fathername}
         onChange={(e) => {
           setFormData({ ...formData, fathername: e.target.value });
-        }}
-      />
-      <input
-        type="number"
-        placeholder="Passing Year : "
-        value={formData.passingyr}
-        onChange={(e) => {
-          setFormData({ ...formData, passingyr: e.target.value });
         }}
       />
       Date Of Birth : 
@@ -40,7 +32,13 @@ export const PersonalDetails = ({ formData, setFormData }) =>
         onChange={(e) => {
           setFormData({ ...formData, adharno: e.target.value });
         }}
-      />
+        />
+         <div onChange={(e) => setFormData({ ...formData,  disability:e.target.value })} >
+        Disability : 
+        <input type="radio" value="Yes" name="disability" /> Yes
+        <input type="radio" value="No" name="disability" /> No
+        
+      </div>
     </div>
   );
 }
