@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import PersonalInfo from "./PersonalInfo";
+import {Qualification} from "./Qualification";
 import {UserInformation} from "./UserInformation";
 import './ReactForm.css'
 import { Details } from "./Details";
+import { PersonalDetails } from "./PersonalDetails";
 export default function ReactForm() {
   const [page, setPage] = useState(0);
-  const currentPage = ["User Information", "Qualification","Personal Details"];
+  const currentPage = ["User Information", "Education","Personal Details","User Details"];
 
   const [formData, setFormData] = useState({
     fname: "",
@@ -25,16 +26,22 @@ export default function ReactForm() {
     disability:""    
   });
 
-  console.log(formData);
+  // console.log(formData);
 
   const DispalyOnTheBasisOfPage = () => {
     if (page === 0) {
       return <UserInformation formData={formData} setFormData={setFormData} />;
     } 
-    else if (page === 1) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
+    else if (page === 1) 
+    {
+      return <Qualification formData={formData} setFormData={setFormData} />; 
     }
-    else if (page === 2) {
+    else if(page===2)
+    {
+      return <PersonalDetails formData={formData} setFormData={setFormData} />;
+    }
+
+    else if (page === 3) {
     return <Details />    
   }
   };

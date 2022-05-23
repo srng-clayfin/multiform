@@ -3,17 +3,6 @@ import './Signup.css'
 export const UserInformation = ({ formData, setFormData }) =>
 {
 
-  const [gender, setGender] = useState();
-
-  const handleChange = e => {
-    const target = e.target;
-    if (target.checked) {
-      setGender(target.value);
-    }
- };
-
- console.log(gender);
-
   return (
     <div className="sing-up">
       <input
