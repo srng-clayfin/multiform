@@ -71,6 +71,7 @@ export default function ReactForm() {
                         console.log(formData)
                         setFormData({})
                         setPage(0);
+                        alert("Record Not Saved...!");
                   }
                   else
                   {
